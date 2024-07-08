@@ -1,0 +1,12 @@
+#Alternate default index page
+DirectoryIndex "Club Website.html"
+
+# Https redirection
+RewriteEngine On 
+RewriteCond %{HTTPS} off 
+
+
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# By Seb
+
